@@ -1,0 +1,25 @@
+DECISION DATE: 2026-03-31 (publications on this day are eligible)
+
+ROW FUNNEL: 12 input rows
+  1. Quarantine missing ticker: removed 1 (rows: 11); 11 remain
+  2. Remove exact duplicates: removed 1 (rows: 7); 10 remain
+  3. Remove late publications: removed 3 (rows: 3, 8, 10); 7 remain
+  4. Keep latest knowable revision: removed 1 (rows: 2); 6 remain
+
+AS-OF PANEL
+Row  Ticker  Month measured  Published on     Index
+  1  AAA     2026-01         2026-02-10       101.0
+  4  AAA     2026-02         2026-03-25       103.0
+  5  BBB     2026-01         2026-02-10        98.0
+  6  BBB     2026-02         2026-03-10        97.0
+  9  CCC     2026-01         2026-02-10       110.0
+ 12  CCC     2026-02         2026-03-10       111.0
+
+SIGNALS: latest month / previous month - 1, expressed as a percent
+Naive uses the latest publication for every measured month, ignoring the cutoff.
+  AAA as-of  2026-02: +1.98% (103.0 / 101.0 - 1; rows 1 -> 4)
+  AAA naive  2026-03: +5.83% (109.0 / 103.0 - 1; rows 4 -> 3)
+  BBB as-of  2026-02: -1.02% (97.0 / 98.0 - 1; rows 5 -> 6)
+  BBB naive  2026-03: -5.15% (92.0 / 97.0 - 1; rows 6 -> 8)
+  CCC as-of  2026-02: +0.91% (111.0 / 110.0 - 1; rows 9 -> 12)
+  CCC naive  2026-02: +1.82% (112.0 / 110.0 - 1; rows 9 -> 10)

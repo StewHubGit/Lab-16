@@ -1,0 +1,161 @@
+{
+  "lab": 16,
+  "status": "PASS",
+  "verified_at_utc": "2026-10-27T18:37:31.390888+00:00",
+  "python": "3.14.7 (main, Sep  1 2026, 14:17:30) [MSC v.1944 64 bit (AMD64)]",
+  "command": "python asof.py",
+  "actual_interpreter": "C:\\Users\\samst\\Downloads\\AI Courses\\AIFinance2026\\.venv\\Scripts\\python.exe",
+  "working_directory": "Lab16_Point_In_Time",
+  "exit_code": 0,
+  "known_answer_source": "User-supplied full training table and expected answer from this session",
+  "checks_passed": 23,
+  "checks_total": 23,
+  "checks": {
+    "decision_date_matches": true,
+    "all_12_original_row_numbers_preserved_in_input": true,
+    "quarantine_matches": true,
+    "duplicates_match": true,
+    "late_publications_match": true,
+    "revision_matches": true,
+    "all_six_panel_rows_match": true,
+    "standard_library_imports_only": true,
+    "standalone_isolated_run_matches": true,
+    "submitted_script_matches_working_script": true,
+    "AAA_as_of_matches": true,
+    "AAA_naive_matches": true,
+    "BBB_as_of_matches": true,
+    "BBB_naive_matches": true,
+    "CCC_as_of_matches": true,
+    "CCC_naive_matches": true,
+    "edited_index_changes_computed_signal": true,
+    "older_vintage_retained_before_revision": true,
+    "decision_day_publication_is_eligible": true,
+    "next_day_revision_cannot_replace_known_value": true,
+    "training_panel_at_2026-02-28": true,
+    "training_panel_at_2026-03-31": true,
+    "training_panel_at_2026-04-30": true
+  },
+  "observed_funnel": [
+    "1. Quarantine missing ticker: removed 1 (rows: 11); 11 remain",
+    "2. Remove exact duplicates: removed 1 (rows: 7); 10 remain",
+    "3. Remove late publications: removed 3 (rows: 3, 8, 10); 7 remain",
+    "4. Keep latest knowable revision: removed 1 (rows: 2); 6 remain"
+  ],
+  "observed_panel": [
+    [
+      "1",
+      "AAA",
+      "2026-01",
+      "2026-02-10",
+      "101.0"
+    ],
+    [
+      "4",
+      "AAA",
+      "2026-02",
+      "2026-03-25",
+      "103.0"
+    ],
+    [
+      "5",
+      "BBB",
+      "2026-01",
+      "2026-02-10",
+      "98.0"
+    ],
+    [
+      "6",
+      "BBB",
+      "2026-02",
+      "2026-03-10",
+      "97.0"
+    ],
+    [
+      "9",
+      "CCC",
+      "2026-01",
+      "2026-02-10",
+      "110.0"
+    ],
+    [
+      "12",
+      "CCC",
+      "2026-02",
+      "2026-03-10",
+      "111.0"
+    ]
+  ],
+  "observed_signals": [
+    "AAA as-of  2026-02: +1.98% (103.0 / 101.0 - 1; rows 1 -> 4)",
+    "AAA naive  2026-03: +5.83% (109.0 / 103.0 - 1; rows 4 -> 3)",
+    "BBB as-of  2026-02: -1.02% (97.0 / 98.0 - 1; rows 5 -> 6)",
+    "BBB naive  2026-03: -5.15% (92.0 / 97.0 - 1; rows 6 -> 8)",
+    "CCC as-of  2026-02: +0.91% (111.0 / 110.0 - 1; rows 9 -> 12)",
+    "CCC naive  2026-02: +1.82% (112.0 / 110.0 - 1; rows 9 -> 10)"
+  ],
+  "three_decision_dates": [
+    {
+      "decision_date": "2026-02-28",
+      "panel_row_numbers": [
+        1,
+        5,
+        9
+      ],
+      "signals": [
+        "AAA as-of  2026-01: N/A (previous month unavailable)",
+        "AAA naive  2026-03: +5.83% (109.0 / 103.0 - 1; rows 4 -> 3)",
+        "BBB as-of  2026-01: N/A (previous month unavailable)",
+        "BBB naive  2026-03: -5.15% (92.0 / 97.0 - 1; rows 6 -> 8)",
+        "CCC as-of  2026-01: N/A (previous month unavailable)",
+        "CCC naive  2026-02: +1.82% (112.0 / 110.0 - 1; rows 9 -> 10)"
+      ]
+    },
+    {
+      "decision_date": "2026-03-31",
+      "panel_row_numbers": [
+        1,
+        4,
+        5,
+        6,
+        9,
+        12
+      ],
+      "signals": [
+        "AAA as-of  2026-02: +1.98% (103.0 / 101.0 - 1; rows 1 -> 4)",
+        "AAA naive  2026-03: +5.83% (109.0 / 103.0 - 1; rows 4 -> 3)",
+        "BBB as-of  2026-02: -1.02% (97.0 / 98.0 - 1; rows 5 -> 6)",
+        "BBB naive  2026-03: -5.15% (92.0 / 97.0 - 1; rows 6 -> 8)",
+        "CCC as-of  2026-02: +0.91% (111.0 / 110.0 - 1; rows 9 -> 12)",
+        "CCC naive  2026-02: +1.82% (112.0 / 110.0 - 1; rows 9 -> 10)"
+      ]
+    },
+    {
+      "decision_date": "2026-04-30",
+      "panel_row_numbers": [
+        1,
+        4,
+        3,
+        5,
+        6,
+        8,
+        9,
+        10
+      ],
+      "signals": [
+        "AAA as-of  2026-03: +5.83% (109.0 / 103.0 - 1; rows 4 -> 3)",
+        "AAA naive  2026-03: +5.83% (109.0 / 103.0 - 1; rows 4 -> 3)",
+        "BBB as-of  2026-03: -5.15% (92.0 / 97.0 - 1; rows 6 -> 8)",
+        "BBB naive  2026-03: -5.15% (92.0 / 97.0 - 1; rows 6 -> 8)",
+        "CCC as-of  2026-02: +1.82% (112.0 / 110.0 - 1; rows 9 -> 10)",
+        "CCC naive  2026-02: +1.82% (112.0 / 110.0 - 1; rows 9 -> 10)"
+      ]
+    }
+  ],
+  "altered_input_test_method": "Inputs changed only in memory; submitted script left unchanged",
+  "files_sha256": {
+    "asof.py": "b81744fbdad2919a2ae1d64ddce61c92cef6c3f5180c148514789f4d36f6846f",
+    "README.md": "ef0f17ecda4bac04458afff09198dc9c589dfc7f010584f1956c42d5f9412822",
+    "DATA_CARD.md": "0ad668b6a9b52b85ee084b42db6a9b88715dedbd7c2e53591dbf2af4f3f1850f",
+    "OUTPUT.txt": "4823f786e3f6b2f58ded8c058febb105affc0205939569429103df0fa25e7b2f"
+  }
+}
